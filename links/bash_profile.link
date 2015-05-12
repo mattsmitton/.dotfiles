@@ -1,0 +1,23 @@
+export PATH=/usr/local/sbin:/usr/local/bin:$HOME/.rvm/bin:$JAVA_HOME/bin:$HOME/packer:$HOME/git/arcanist/bin:$PATH
+
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+if [ -d $HOME/.bash.d ]; then
+    for x in $HOME/.bash.d/* ; do
+        test -f "$x" || continue
+        test -x "$x" || continue
+        . "$x"
+    done
+fi
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
+
+# Bash completion
+export ASKBASH_HOME=$HOME/git/askbash
+source $ASKBASH_HOME/bashrc-generator.bash
