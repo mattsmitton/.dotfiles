@@ -17,6 +17,5 @@ puts 'Setting you as owner on /usr/local'
 
 INSTALLED_CASK_RECIPES =  `brew cask list`
 INSTALLED_RECIPES =  `brew list`
-INSTALLED_TAPS = `brew taps`
-
+INSTALLED_TAPS = `brew tap`
 

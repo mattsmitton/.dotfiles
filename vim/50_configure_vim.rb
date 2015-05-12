@@ -6,8 +6,11 @@ vim_folder = "#{HOME}/.vim"
 git_config = vim_folder + "/.git/config"
 
 def run_clone
+  `git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell`
   `git clone --recursive https://github.com/beeerd/Vim-Configuration #{HOME}/.vim`
+  `git clone https://github.com/gmarik/Vundle.vim.git #{HOME}/.vim/bundle/Vundle.vim`
 end
+
 
 if File.exist?(git_config) && File.read(git_config).scan(/beeerd\/Vim-Configuration/)
   Dir.chdir(vim_folder) do

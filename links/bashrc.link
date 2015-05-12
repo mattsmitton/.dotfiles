@@ -9,11 +9,11 @@ shopt -s cdable_vars # variables are cd-able shortcuts
 shopt -s cdspell     # autocorrect transposed cd targets
 shopt -s cmdhist     # save output of multiline commands to single line in history
 shopt -s dotglob     # includes filenames beginning with a ‘.’ in the results of filename expansion
-shopt -s extglob     # extended pattern matching http://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching 
+shopt -s extglob     # extended pattern matching http://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching
 shopt -s histappend  # append history instead of overwrite
 shopt -s nocaseglob  # case insensitive file name expansion
 
-if [[ ( $(hostname) == "Matts-Air" ) || ( $(hostname) == "Matts-MacBook-Air.local" ) ]] ; 
+if [[ ( $(hostname) == "cthulu" ) || ( $(hostname) == "cthulu.local" ) ]] ;
 then
   source $HOME/.local_config
 else
@@ -24,4 +24,3 @@ fi
 # After each command, append to the history file and reread it
 # Keeps history in sync between terminal sessions
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-source /Users/mattsmith/.cp_ssh_aliases

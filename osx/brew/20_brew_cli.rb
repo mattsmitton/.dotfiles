@@ -3,11 +3,11 @@ puts "#{Tty.blue}Installing Brew packages...#{Tty.reset}"
 recipes = [
     "Caskroom/cask/osxfuse",      # For mounting filesystems, use this alternate source because of kexts
     "ack",                        # Search inside of files
-    "ansible",                    # System configuration/management
+#    "ansible",                    # System configuration/management
     "autoconf",
     "automake",
     "bash",                       # Updated bash
-    "boost",
+#    "boost",
     "boot2docker",
     "brew-cask",
     "cask",
@@ -90,7 +90,7 @@ recipes = [
 recipes.each do |r|
   unless INSTALLED_RECIPES.include?(r)
     puts "    installing #{r}"
-    `brew install #{r}`
+    system("brew install #{r}")
   else
     puts "    skipping #{r}"
   end

@@ -1,10 +1,9 @@
 puts "#{Tty.blue}Installing fonts...#{Tty.reset}"
 
 recipes = [
-  'font-meslo-lg-for-powerline',  # Used in terminal
-  'font-m-plus',
-  'font-clear-sans',
-  'font-roboto'
+  'font-inconsolata-dz-for-powerline',  # Used in terminal
+  'font-inconsolata-dz',
+  'font-inconsolata'
 ]
 
 recipes.each do |r|
