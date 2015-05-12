@@ -1,7 +1,7 @@
 puts "#{Tty.blue}Installing brew GUI applications...#{Tty.reset}"
 
 recipes = [
-    "1password",       # Password manager
+#    "1password",       # Password manager
     "adapter",         # Media converter
     "adium",           # Chat client
     "alfred",          # App and file launcher
@@ -21,13 +21,13 @@ recipes = [
     "macdown",         # Markdown editor
     "omnidisksweeper", # See whats using disk space in a GUI
     "omnifocus",       # Task managment
-    "propane",         # Chat client
+#    "propane",         # Chat client
     "qlstephen",       # Quicklook for files without extension
     "quicklook-csv",   # Quicklook for csv files
     "quicklook-json",  # Quicklook for JSON files
     "sequel-pro",      # Postgres DB admin and viewing schema
     "skype",           # Chat and calls
-    "slack",           # Business chat client
+#    "slack",           # Business chat client
     "spectacle",       # Resize windows quickly
     "torbrowser",      # Anonymous browser
     "transmission",    # Torrent client

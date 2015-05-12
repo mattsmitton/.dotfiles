@@ -12,6 +12,7 @@ puts 'Setting you as owner on /usr/local'
 `brew tap caskroom/fonts`              # fonts
 `brew tap thoughtbot/formulae`         # pick
 `brew tap nviennot/tmate`              # for tmate
+`brew tap homebrew/versions`           # not sure, but here it is! 
 `brew install caskroom/cask/brew-cask` # mac os x gui apps
 
 INSTALLED_CASK_RECIPES =  `brew cask list`

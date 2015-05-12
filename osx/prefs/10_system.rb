@@ -15,6 +15,7 @@
 # Disable the “Are you sure you want to open this application?” dialog
 # `defaults write com.apple.LaunchServices LSQuarantine -bool false`
 
+# Hide everything on the desktop
 `defaults write com.apple.finder CreateDesktop -bool false`
  
 # Finder: show path bar
