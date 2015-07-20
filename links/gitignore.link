@@ -12,3 +12,5 @@ zeus.json
 *.log
 
 tags
+vendor/bundle
+.DS_Store

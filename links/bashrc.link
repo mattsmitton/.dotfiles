@@ -24,3 +24,4 @@ fi
 # After each command, append to the history file and reread it
 # Keeps history in sync between terminal sessions
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
