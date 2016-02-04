@@ -13,7 +13,7 @@ shopt -s extglob     # extended pattern matching http://www.gnu.org/software/bas
 shopt -s histappend  # append history instead of overwrite
 shopt -s nocaseglob  # case insensitive file name expansion
 
-if [[ ( $(hostname) == "cthulu" ) || ( $(hostname) == "cthulu.local" ) ]] ;
+if [[ ( $(hostname) == "m2" ) || ( $(hostname) == "m2.local" ) ]] ;
 then
   source $HOME/.local_config
 else
