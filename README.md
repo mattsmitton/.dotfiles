@@ -5,7 +5,7 @@ We'll clone the repo locally into your home folder, in a folder called .dotfiles
 
 ```
 cd ~
-git clone --recursive https://github.com/counterbeing/.dotfiles
+git clone --recursive https://github.com/beeerd/.dotfiles
 cd .dotfiles
 ruby bootstrap.rb
 ```
