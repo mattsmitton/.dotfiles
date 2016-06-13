@@ -13,13 +13,9 @@ shopt -s extglob     # extended pattern matching http://www.gnu.org/software/bas
 shopt -s histappend  # append history instead of overwrite
 shopt -s nocaseglob  # case insensitive file name expansion
 
-if [[ ( $(hostname) == "m2" ) || ( $(hostname) == "m2.local" ) ]] ;
-then
-  source $HOME/.local_config
-else
-  # Remote host prompt
-  PS1="\e[0;31m[\#]\e[m \e[0;33m[\d\e[m \e[0;32m\t]\e[m\n\e[0;36m[\u@\h]\e[m\e[0;35m[\w]\e[m\n"
-fi
+PS1="\e[0;31m[\#]\e[m \e[0;33m[\d\e[m \e[0;32m\t]\e[m\n\e[0;36m[\u@\h]\e[m\e[0;35m[\w]\e[m\n"
+
+source $HOME/.local_config
 
 # After each command, append to the history file and reread it
 # Keeps history in sync between terminal sessions

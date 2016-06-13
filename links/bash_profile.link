@@ -2,6 +2,10 @@ export PATH=/usr/local/sbin:/usr/local/bin:$JAVA_HOME/bin:$HOME/packer:$HOME/git
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
+[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
+
+[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+
 if [ -d $HOME/.bash.d ]; then
     for x in $HOME/.bash.d/* ; do
         test -f "$x" || continue
@@ -13,10 +17,4 @@ fi
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
-[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
-
-# Bash completion
-#export ASKBASH_HOME=$HOME/git/askbash
-#source $ASKBASH_HOME/bashrc-generator.bash
 
