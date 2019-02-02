@@ -10,7 +10,7 @@
 `defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true`
  
 # Save to disk (not to iCloud) by default
-`defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false`
+# `defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false`
 
 # Disable the “Are you sure you want to open this application?” dialog
 # `defaults write com.apple.LaunchServices LSQuarantine -bool false`
@@ -42,9 +42,9 @@
 `defaults write -g "com.apple.sound.beep.feedback" -int 0`
 
 # Menu bar: hide the Time Machine and User icons
-`defaults write ~/Library/Preferences/ByHost/com.apple.systemuiserver.* dontAutoLoad -array \
-   "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-   "/System/Library/CoreServices/Menu Extras/User.menu" `
+# `defaults write ~/Library/Preferences/ByHost/com.apple.systemuiserver.* dontAutoLoad -array \
+#   "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+#   "/System/Library/CoreServices/Menu Extras/User.menu" `
 
 # Developer CrashReport dialog type
 `defaults write com.apple.CrashReporter DialogType developer`
@@ -74,9 +74,6 @@
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 `defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true`
-
-# Disable local Time Machine backups
-`hash tmutil &> /dev/null && sudo tmutil disablelocal`
 
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #

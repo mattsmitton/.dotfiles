@@ -45,9 +45,8 @@ run_each_in_dir("osx/rbenv")
 puts "#{Tty.blue}Enabling .gitignore global. #{Tty.reset}"
 run_each_in_dir("osx/git")
 
-puts "#{Tty.blue}Installing powerline. #{Tty.reset}"
-run_each_in_dir("osx/powerline")
+puts "#{Tty.blue}Configuring iTerm #{Tty.reset}"
+run_each_in_dir("osx/iterm")
 
 puts "#{Tty.blue}Configuring Vim. #{Tty.reset}"
 run_each_in_dir("vim")
-

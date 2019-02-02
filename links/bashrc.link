@@ -15,7 +15,7 @@ shopt -s nocaseglob  # case insensitive file name expansion
 
 PS1="\e[0;31m[\#]\e[m \e[0;33m[\d\e[m \e[0;32m\t]\e[m\n\e[0;36m[\u@\h]\e[m\e[0;35m[\w]\e[m\n"
 
-source $HOME/.local_config
+[[ -s "$HOME/.local_config" ]] && source $HOME/.local_config
 
 # After each command, append to the history file and reread it
 # Keeps history in sync between terminal sessions

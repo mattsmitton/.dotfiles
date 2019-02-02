@@ -4,17 +4,18 @@ export PATH=/usr/local/sbin:/usr/local/bin:$JAVA_HOME/bin:$HOME/packer:$HOME/git
 
 [[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
 
-[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+eval "$(rbenv init -)"
+
+[[ -d "$HOME/.config/liquidprompt" ]] && [[ $- = *i* ]] && source ~/.config/liquidprompt/liquidprompt
 
 if [ -d $HOME/.bash.d ]; then
     for x in $HOME/.bash.d/* ; do
         test -f "$x" || continue
         test -x "$x" || continue
-        . "$x"
+        source "$x"
     done
 fi
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
