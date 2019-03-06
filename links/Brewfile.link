@@ -1,71 +1,87 @@
 cask_args appdir: '/Applications'
 tap 'homebrew/cask'
+tap 'wata727/tflint'
 
-brew 'ack'                               # Search tool
+## Packages
+
+brew 'ack'                        # Search tool
 brew 'awscli'
 brew 'bash'
 brew 'bash-completion'
 brew 'bitwarden-cli'
-brew 'coreutils'                         # All the nice gnu versions of things
-brew 'csshx'                             # Terminal multiplexer
+brew 'coreutils'                  # All the nice gnu versions of things
+brew 'csshx'                      # Terminal multiplexer
 brew 'curl'
-brew 'docker'
-brew 'fontforge'                         # Font builder, using to add ligatures to fonts
+brew 'fontforge'                  # Font builder, using to add ligatures to fonts
 brew 'fping'
+brew 'fzf'                        # Another fuzzy finder tool, with some bash/vim hooks
 brew 'git'
+brew 'golang'
 brew 'gnupg'
 brew 'htop-osx'
 brew 'kitchen-completion'
-brew 'mas'                               # Add support for installing mac store apps with homebrew
+brew 'mas'                        # Add support for installing mac store apps with homebrew
+brew 'mobile-shell'
 brew 'openssl'
-brew 'pick'                              # Fuzzy search tool
-brew 'pwgen'                             # Password generator
+brew 'pick'                       # Fuzzy search tool
+brew 'pwgen'                      # Password generator
 brew 'python'
 brew 'rbenv'
 brew 'readline'
-brew 'reattach-to-user-namespace'        # Used to enable clipboard/pbcopy support in tmux
+brew 'reattach-to-user-namespace' # Used to enable clipboard/pbcopy support in tmux
+brew 'ripgrep'                    # Ultra-fast grep
 brew 'ruby-build'
 brew 'ssh-copy-id'
 brew 'tcping'
-brew 'terminal-notifier'                 # Nifty terminal alert messages
-brew 'the_silver_searcher'               # Provides 'ag', a faster (but more minimalistic) 'ack'
+brew 'terminal-notifier'          # Nifty terminal alert messages
+brew 'tflint'
+brew 'thefuck'
 brew 'tmux'
 brew 'tree'
 brew 'unrar'
 brew 'vim'
 brew 'watch'
 brew 'wget'
-brew 'xz'                                # Another compression tool
+brew 'yarn'                       # Used to install some vim extensions for CoC
+brew 'xz'                         # Another compression tool
 
-cask 'adapter'                           # Convert any audio/video
+## Casks
+
+cask 'adapter'                 # Convert any audio/video
 cask 'alfred'
+cask 'balenaetcher'            # Make bootable USB drives
 cask 'bitwarden'
 cask 'caffeine'
 cask 'cocoarestclient'
-cask 'cyberduck'                         # S3 browser
+cask 'cyberduck'               # S3 browser
+cask 'docker'
 cask 'dropbox'
 cask 'firefox'
 cask 'google-chrome'
-cask 'i1profiler'                        # For screen color calibration
+cask 'i1profiler'              # For screen color calibration
 cask 'iterm2'
 cask 'keybase'
 cask 'little-snitch'
 cask 'macdown'
-cask 'omnidisksweeper'                   # Helps find big files to get rid of
+cask 'omnidisksweeper'         # Helps find big files to get rid of
 cask 'osxfuse'
 cask 'private-internet-access'
-cask 'qlstephen'                         # Quick look support for text files
+cask 'qlstephen'               # Quick look support for text files
 cask 'quicklook-csv'
 cask 'quicklook-json'
 cask 'skype'
 cask 'slack'
-cask 'spectacle'                         # Window wrangler
+cask 'spectacle'               # Window wrangler
 cask 'spotify'
 cask 'tor-browser'
 cask 'transmission'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'vlc'
-cask 'zoomus'                            # Video conferencing
+cask 'zoomus'                  # Video conferencing
+
+
+## App Store
 
 mas 'omnifocus', id: 1346203938
+mas 'lastpass', id: 926036361

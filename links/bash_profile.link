@@ -1,12 +1,10 @@
-export PATH=/usr/local/sbin:/usr/local/bin:$JAVA_HOME/bin:$HOME/packer:$HOME/git/arcanist/bin:$PATH
+eval "$(rbenv init -)"
+
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/opt/chefdk/bin:/usr/local/sbin:/usr/local/bin:$HOME/packer:$HOME/go/bin:$JAVA_HOME/bin:$PATH"
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 [[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
-
-eval "$(rbenv init -)"
-
-[[ -d "$HOME/.config/liquidprompt" ]] && [[ $- = *i* ]] && source ~/.config/liquidprompt/liquidprompt
 
 if [ -d $HOME/.bash.d ]; then
     for x in $HOME/.bash.d/* ; do
@@ -15,6 +13,8 @@ if [ -d $HOME/.bash.d ]; then
         source "$x"
     done
 fi
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # Base16 Shell
 BASE16_SHELL=$HOME/.config/base16-shell/

@@ -1,10 +1,12 @@
 JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home"
-EDITOR=vim
 HISTCONTROL=ignoreboth
 HISTSIZE=50000
 HISTIGNORE='ls -la:ll:w:pwd'
 force_color_prompt=yes
+export GPG_TTY=$(tty)
+export EDITOR='/usr/local/bin/vim'
 
+set -o vi            # Vi mode
 shopt -s cdable_vars # variables are cd-able shortcuts
 shopt -s cdspell     # autocorrect transposed cd targets
 shopt -s cmdhist     # save output of multiline commands to single line in history
@@ -17,7 +19,30 @@ PS1="\e[0;31m[\#]\e[m \e[0;33m[\d\e[m \e[0;32m\t]\e[m\n\e[0;36m[\u@\h]\e[m\e[0;3
 
 [[ -s "$HOME/.local_config" ]] && source $HOME/.local_config
 
+# In case we didn't override this
+if ! type __prompt_command &>/dev/null; then
+  __prompt_command (){ true;}
+fi
+
+# Using this to set git SSH key based on PWD
+# function set in non-public location
+PROMPT_COMMAND=__prompt_command
+
 # After each command, append to the history file and reread it
 # Keeps history in sync between terminal sessions
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
+[[ -d "$HOME/.config/liquidprompt" ]] && [[ $- = *i* ]] && source ~/.config/liquidprompt/liquidprompt
+
+# Setup fuzzy find using ripgrep for speed
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="cd ~/; bfs -type d -nohidden | sed s/^\./~/"
+bind -x '"\C-p": vim $(fzf);'
+
+# Yet one more path update for vim's coc plugin
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Whoops
+eval $(thefuck --alias fuck)
