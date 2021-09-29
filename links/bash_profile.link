@@ -1,6 +1,13 @@
+# export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/opt/chefdk/bin:/opt/chefdk/embedded/bin:/Users/ms/.chefdk/gem/ruby/2.5.0/bin:/usr/local/sbin:/usr/local/bin:$HOME/packer:$HOME/go/bin:$JAVA_HOME/bin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$HOME/packer:$HOME/go/bin:$JAVA_HOME/bin:$PATH"
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 eval "$(rbenv init -)"
 
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/opt/chefdk/bin:/usr/local/sbin:/usr/local/bin:$HOME/packer:$HOME/go/bin:$JAVA_HOME/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 

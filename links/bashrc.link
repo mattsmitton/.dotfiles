@@ -1,4 +1,4 @@
-JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home"
+JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
 HISTCONTROL=ignoreboth
 HISTSIZE=50000
 HISTIGNORE='ls -la:ll:w:pwd'

@@ -69,6 +69,7 @@ cask 'private-internet-access'
 cask 'qlstephen'               # Quick look support for text files
 cask 'quicklook-csv'
 cask 'quicklook-json'
+cask 'signal'
 cask 'skype'
 cask 'slack'
 cask 'spectacle'               # Window wrangler

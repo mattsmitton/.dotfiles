@@ -5,7 +5,6 @@ dist
 bower_components
 .DS_Store
 zeus.json
-.jshintrc
 .direnv
 .envrc
 .bundle
