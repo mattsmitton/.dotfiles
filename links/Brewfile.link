@@ -1,9 +1,12 @@
 cask_args appdir: '/Applications'
+tap 'aquasecurity/trivy'
+tap 'boz/repo'
+tap 'gabrie30/utils'
 tap 'homebrew/cask'
+tap 'snyk/tap'
 tap 'wata727/tflint'
 
 ## Packages
-# rcmdnk/file/brew-file (Required to use this Brewfile)
 brew 'ack'                        # Search tool
 brew 'aquasecurity/trivy/trivy'
 brew 'awk'
@@ -53,7 +56,6 @@ brew 'openssl'
 brew 'p7zip'
 brew 'packer'
 brew 'packer-completion'
-brew 'parera10/csshx/csshx'
 brew 'pgcli'
 brew 'pick'                       # Fuzzy search tool
 brew 'pre-commit'
