@@ -3,74 +3,124 @@ tap 'homebrew/cask'
 tap 'wata727/tflint'
 
 ## Packages
-
+# rcmdnk/file/brew-file (Required to use this Brewfile)
 brew 'ack'                        # Search tool
+brew 'aquasecurity/trivy/trivy'
+brew 'awk'
+brew 'aws-iam-authenticator'
 brew 'awscli'
+brew 'awscurl'
 brew 'bash'
 brew 'bash-completion'
 brew 'bitwarden-cli'
+brew 'boz/repo/kail'
 brew 'coreutils'                  # All the nice gnu versions of things
 brew 'csshx'                      # Terminal multiplexer
 brew 'curl'
+brew 'dependency-check'
+brew 'ffmpeg'
+brew 'findutils'
 brew 'fontforge'                  # Font builder, using to add ligatures to fonts
 brew 'fping'
 brew 'fzf'                        # Another fuzzy finder tool, with some bash/vim hooks
+brew 'gabrie30/utils/ghorg'
+brew 'geoip'
+brew 'geoipupdate'
+brew 'gh'
 brew 'git'
-brew 'golang'
+brew 'git-secrets'
+brew 'gitleaks'
+brew 'gnu-sed'
+brew 'gnu-tar'
 brew 'gnupg'
+brew 'golang'
+brew 'groovy'
+brew 'htop'
 brew 'htop-osx'
+brew 'hub'
+brew 'jfrog-cli'
+brew 'jq'
 brew 'kitchen-completion'
+brew 'lastpass-cli'
 brew 'mas'                        # Add support for installing mac store apps with homebrew
+brew 'maven'
 brew 'mobile-shell'
+brew 'mosh'
+brew 'neovim'
+brew 'nvm'
+brew 'openconnect'
 brew 'openssl'
+brew 'p7zip'
+brew 'packer'
+brew 'packer-completion'
+brew 'parera10/csshx/csshx'
+brew 'pgcli'
 brew 'pick'                       # Fuzzy search tool
+brew 'pre-commit'
+brew 'prometheus'
+brew 'pv'
 brew 'pwgen'                      # Password generator
-brew 'python'
+brew 'python@3.9'
+brew 'qrencode'
 brew 'rbenv'
 brew 'readline'
 brew 'reattach-to-user-namespace' # Used to enable clipboard/pbcopy support in tmux
+brew 'rename'
 brew 'ripgrep'                    # Ultra-fast grep
 brew 'ruby-build'
+brew 'snyk/tap/snyk'
+brew 'sops'
+brew 'sphinx-doc'
 brew 'ssh-copy-id'
 brew 'tcping'
 brew 'terminal-notifier'          # Nifty terminal alert messages
+brew 'terraform-docs'
+brew 'terraform_landscape'
+brew 'tfenv'
 brew 'tflint'
+brew 'the_silver_searcher'
 brew 'thefuck'
+brew 'tmate'
 brew 'tmux'
 brew 'tree'
 brew 'unrar'
 brew 'vim'
 brew 'watch'
 brew 'wget'
-brew 'yarn'                       # Used to install some vim extensions for CoC
 brew 'xz'                         # Another compression tool
+brew 'yarn'                       # Used to install some vim extensions for CoC
 
 ## Casks
 
 cask 'adapter'                 # Convert any audio/video
 cask 'alfred'
+cask 'aws-vault'
 cask 'balenaetcher'            # Make bootable USB drives
 cask 'bitwarden'
 cask 'caffeine'
+cask 'chefdk'
 cask 'cocoarestclient'
 cask 'cyberduck'               # S3 browser
 cask 'docker'
 cask 'dropbox'
 cask 'firefox'
+cask 'font-fira-code'
+cask 'gimp'
 cask 'google-chrome'
 cask 'i1profiler'              # For screen color calibration
 cask 'iterm2'
 cask 'keybase'
 cask 'little-snitch'
 cask 'macdown'
+cask 'numi'
 cask 'omnidisksweeper'         # Helps find big files to get rid of
 cask 'osxfuse'
+cask 'pref-setter'
 cask 'private-internet-access'
 cask 'qlstephen'               # Quick look support for text files
 cask 'quicklook-csv'
 cask 'quicklook-json'
 cask 'signal'
-cask 'skype'
 cask 'slack'
 cask 'spectacle'               # Window wrangler
 cask 'spotify'
@@ -81,8 +131,9 @@ cask 'virtualbox'
 cask 'vlc'
 cask 'zoomus'                  # Video conferencing
 
-
 ## App Store
-
+mas 'Paprika Recipe Manager 3', id: 1303222628
+mas 'Amphetamine', id: 937984704
+mas 'Aruba VIA', id: 1439900554
 mas 'omnifocus', id: 1346203938
 mas 'lastpass', id: 926036361
