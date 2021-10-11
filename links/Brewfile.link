@@ -3,6 +3,7 @@ tap 'aquasecurity/trivy'
 tap 'boz/repo'
 tap 'gabrie30/utils'
 tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
 tap 'snyk/tap'
 tap 'wata727/tflint'
 
@@ -99,9 +100,9 @@ cask 'aws-vault'
 cask 'balenaetcher'            # Make bootable USB drives
 cask 'bitwarden'
 cask 'caffeine'
-cask 'chefdk'
 cask 'cocoarestclient'
 cask 'cyberduck'               # S3 browser
+cask 'discord'
 cask 'docker'
 cask 'dropbox'
 cask 'firefox'
@@ -116,7 +117,6 @@ cask 'macdown'
 cask 'numi'
 cask 'omnidisksweeper'         # Helps find big files to get rid of
 cask 'osxfuse'
-cask 'pref-setter'
 cask 'private-internet-access'
 cask 'qlstephen'               # Quick look support for text files
 cask 'quicklook-csv'
@@ -130,7 +130,6 @@ cask 'transmission'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'vlc'
-cask 'zoomus'                  # Video conferencing
 
 ## App Store
 mas 'Paprika Recipe Manager 3', id: 1303222628
