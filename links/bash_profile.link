@@ -1,13 +1,16 @@
-# export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/opt/chefdk/bin:/opt/chefdk/embedded/bin:/Users/ms/.chefdk/gem/ruby/2.5.0/bin:/usr/local/sbin:/usr/local/bin:$HOME/packer:$HOME/go/bin:$JAVA_HOME/bin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$HOME/packer:$HOME/go/bin:$JAVA_HOME/bin:$PATH"
+export GOENV_ROOT="${HOME}/.goenv"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$HOME/packer:$GOENV_ROOT/go/bin:$JAVA_HOME/bin:$PATH"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-eval "$(rbenv init -)"
+export AWS_VAULT_PROMPT=ykman
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+eval "$(/Users/matts/.chefvm/bin/chefvm init -)"
+
+# https://github.com/syndbg/goenv/blob/master/INSTALL.md
+eval "$(goenv init -)"
+export PATH="${GOROOT}/bin:$PATH"
+export PATH="$PATH:${GOPATH}/bin"
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
@@ -26,3 +29,5 @@ fi
 # Base16 Shell
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+complete -C /usr/local/bin/nomad nomad

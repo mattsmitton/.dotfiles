@@ -1,4 +1,6 @@
 cask_args appdir: '/Applications'
+
+## Taps
 tap 'aquasecurity/trivy'
 tap 'boz/repo'
 tap 'gabrie30/utils'
@@ -6,6 +8,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'snyk/tap'
 tap 'wata727/tflint'
+tap 'microsoft/git'
 
 ## Packages
 brew 'ack'                        # Search tool
@@ -48,10 +51,10 @@ brew 'kitchen-completion'
 brew 'lastpass-cli'
 brew 'mas'                        # Add support for installing mac store apps with homebrew
 brew 'maven'
+brew 'mise'
 brew 'mobile-shell'
 brew 'mosh'
 brew 'neovim'
-brew 'nvm'
 brew 'openconnect'
 brew 'openssl'
 brew 'p7zip'
@@ -65,7 +68,6 @@ brew 'pv'
 brew 'pwgen'                      # Password generator
 brew 'python@3.9'
 brew 'qrencode'
-brew 'rbenv'
 brew 'readline'
 brew 'reattach-to-user-namespace' # Used to enable clipboard/pbcopy support in tmux
 brew 'rename'
@@ -79,7 +81,6 @@ brew 'tcping'
 brew 'terminal-notifier'          # Nifty terminal alert messages
 brew 'terraform-docs'
 brew 'terraform_landscape'
-brew 'tfenv'
 brew 'tflint'
 brew 'the_silver_searcher'
 brew 'thefuck'
@@ -99,7 +100,6 @@ cask 'alfred'
 cask 'aws-vault'
 cask 'balenaetcher'            # Make bootable USB drives
 cask 'bitwarden'
-cask 'caffeine'
 cask 'cocoarestclient'
 cask 'cyberduck'               # S3 browser
 cask 'discord'
@@ -108,8 +108,9 @@ cask 'dropbox'
 cask 'firefox'
 cask 'font-fira-code'
 cask 'gimp'
+cask 'git-credential-manager-core' # Git credential management
 cask 'google-chrome'
-cask 'i1profiler'              # For screen color calibration
+cask 'calibrite'              # For screen color calibration
 cask 'iterm2'
 cask 'keybase'
 cask 'little-snitch'
@@ -121,9 +122,9 @@ cask 'private-internet-access'
 cask 'qlstephen'               # Quick look support for text files
 cask 'quicklook-csv'
 cask 'quicklook-json'
+cask 'rectangle'               # Window wrangler
 cask 'signal'
 cask 'slack'
-cask 'spectacle'               # Window wrangler
 cask 'spotify'
 cask 'tor-browser'
 cask 'transmission'
@@ -136,4 +137,3 @@ mas 'Paprika Recipe Manager 3', id: 1303222628
 mas 'Amphetamine', id: 937984704
 mas 'Aruba VIA', id: 1439900554
 mas 'omnifocus', id: 1346203938
-mas 'lastpass', id: 926036361

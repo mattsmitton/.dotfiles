@@ -1,10 +1,11 @@
-JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
+JAVA_HOME="/usr/local/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home"
 HISTCONTROL=ignoreboth
 HISTSIZE=50000
 HISTIGNORE='ls -la:ll:w:pwd'
 force_color_prompt=yes
 export GPG_TTY=$(tty)
-export EDITOR='/usr/local/bin/vim'
+export EDITOR='/usr/local/bin/nvim'
+export DOCKER_BUILDKIT=1
 
 set -o vi            # Vi mode
 shopt -s cdable_vars # variables are cd-able shortcuts
@@ -26,7 +27,7 @@ fi
 
 # Using this to set git SSH key based on PWD
 # function set in non-public location
-PROMPT_COMMAND=__prompt_command
+# PROMPT_COMMAND=__prompt_command
 
 # After each command, append to the history file and reread it
 # Keeps history in sync between terminal sessions
@@ -40,9 +41,21 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="cd ~/; bfs -type d -nohidden | sed s/^\./~/"
 bind -x '"\C-p": vim $(fzf);'
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
 
 # Yet one more path update for vim's coc plugin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Whoops
 eval $(thefuck --alias fuck)
+
+# mise
+eval "$(/usr/local/bin/mise activate bash)"
+
+# gh autocompletion
+eval "$(gh completion -s bash)"
