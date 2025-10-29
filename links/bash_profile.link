@@ -1,16 +1,8 @@
-export GOENV_ROOT="${HOME}/.goenv"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$HOME/packer:$GOENV_ROOT/go/bin:$JAVA_HOME/bin:$PATH"
-
 export BASH_SILENCE_DEPRECATION_WARNING=1
-
 export AWS_VAULT_PROMPT=ykman
 
+eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(/Users/matts/.chefvm/bin/chefvm init -)"
-
-# https://github.com/syndbg/goenv/blob/master/INSTALL.md
-eval "$(goenv init -)"
-export PATH="${GOROOT}/bin:$PATH"
-export PATH="$PATH:${GOPATH}/bin"
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
@@ -24,10 +16,15 @@ if [ -d $HOME/.bash.d ]; then
     done
 fi
 
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+[ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
 # Base16 Shell
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+BASE16_SHELL="$HOME/.config/base16-shell"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        source "$BASE16_SHELL/profile_helper.sh"
 
-complete -C /usr/local/bin/nomad nomad
+base16_eighties
+
+# Created by `pipx` on 2024-11-13 17:39:17
+export PATH="$PATH:/Users/matts/.local/bin"

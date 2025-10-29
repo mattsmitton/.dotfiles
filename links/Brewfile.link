@@ -4,8 +4,6 @@ cask_args appdir: '/Applications'
 tap 'aquasecurity/trivy'
 tap 'boz/repo'
 tap 'gabrie30/utils'
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
 tap 'snyk/tap'
 tap 'wata727/tflint'
 tap 'microsoft/git'
@@ -25,6 +23,7 @@ brew 'coreutils'                  # All the nice gnu versions of things
 brew 'csshx'                      # Terminal multiplexer
 brew 'curl'
 brew 'dependency-check'
+brew 'dive'
 brew 'ffmpeg'
 brew 'findutils'
 brew 'fontforge'                  # Font builder, using to add ligatures to fonts
@@ -43,7 +42,6 @@ brew 'gnupg'
 brew 'golang'
 brew 'groovy'
 brew 'htop'
-brew 'htop-osx'
 brew 'hub'
 brew 'jfrog-cli'
 brew 'jq'
@@ -52,7 +50,7 @@ brew 'lastpass-cli'
 brew 'mas'                        # Add support for installing mac store apps with homebrew
 brew 'maven'
 brew 'mise'
-brew 'mobile-shell'
+brew 'mtr'
 brew 'mosh'
 brew 'neovim'
 brew 'openconnect'
@@ -92,6 +90,8 @@ brew 'watch'
 brew 'wget'
 brew 'xz'                         # Another compression tool
 brew 'yarn'                       # Used to install some vim extensions for CoC
+brew 'ykman'
+brew 'yq'
 
 ## Casks
 
@@ -100,6 +100,7 @@ cask 'alfred'
 cask 'aws-vault'
 cask 'balenaetcher'            # Make bootable USB drives
 cask 'bitwarden'
+cask 'calibrite-profiler'
 cask 'cocoarestclient'
 cask 'cyberduck'               # S3 browser
 cask 'discord'
@@ -110,30 +111,31 @@ cask 'font-fira-code'
 cask 'gimp'
 cask 'git-credential-manager-core' # Git credential management
 cask 'google-chrome'
-cask 'calibrite'              # For screen color calibration
 cask 'iterm2'
 cask 'keybase'
 cask 'little-snitch'
 cask 'macdown'
+cask 'macfuse'
 cask 'numi'
 cask 'omnidisksweeper'         # Helps find big files to get rid of
-cask 'osxfuse'
+cask 'openvpn-connect'
 cask 'private-internet-access'
-cask 'qlstephen'               # Quick look support for text files
-cask 'quicklook-csv'
-cask 'quicklook-json'
+cask 'proton-mail'
 cask 'rectangle'               # Window wrangler
 cask 'signal'
 cask 'slack'
 cask 'spotify'
+cask 'syntax-highlight'        # syntax-highlighted quicklook support
 cask 'tor-browser'
 cask 'transmission'
 cask 'vagrant'
-cask 'virtualbox'
+cask 'virtualbox@beta'         # beta required for ARM chips
 cask 'vlc'
 
 ## App Store
 mas 'Paprika Recipe Manager 3', id: 1303222628
 mas 'Amphetamine', id: 937984704
-mas 'Aruba VIA', id: 1439900554
+# Uncomment on initial install, mas-cli bug causes it to reinstall every time
+# https://github.com/mas-cli/mas/issues/256
+# mas 'HPE Virtual Intranet (VIA)', id: 1439900554
 mas 'omnifocus', id: 1346203938

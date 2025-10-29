@@ -5,10 +5,13 @@ puts "Cloning the vim config into ~/.vim"
 vim_folder = "#{HOME}/.vim"
 git_config = vim_folder + "/.git/config"
 
+Dir.mkdir("#{HOME}/.config/nvim")
+
 def run_clone
   `git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell`
   `git clone --recursive https://github.com/beeerd/Vim-Configuration #{HOME}/.vim`
-  `git clone https://github.com/gmarik/Vundle.vim.git #{HOME}/.vim/bundle/Vundle.vim`
+  `sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
 end
 
 
@@ -24,9 +27,9 @@ else
 end
 
 make_link_where_appropriate("#{vim_folder}/.vimrc", "#{HOME}/.vimrc")
+make_link_where_appropriate("#{vim_folder}/.vimrc", "#{HOME}/.config/nvim/init.vim")
 
-puts "Installing vim bundles with Vundle, this will take a moment"
+puts "Installing nvim plugins with vim-plug..."
 Dir.chdir(vim_folder) do
-  # Install all Vundle plugins
-  %x[vim +PluginInstall +qall]
+  %x[nvim +PlugInstall]
 end
